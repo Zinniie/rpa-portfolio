@@ -356,8 +356,7 @@
     <div class="hero-tag">RPA Developer &amp; Automation Engineer</div>
     <h1>Building bots that<br><em>work while you sleep</em></h1>
     <p class="hero-sub">
-      Enterprise automation solutions using UiPath and Blue Prism, from design through deployment, support,
-      monitoring, and continuous improvement.
+      Enterprise automation solutions using Blue Prism and UiPath — from solution design and development through deployment, production support, and continuous improvement.
     </p>
     <a href="#projects" class="hero-cta">View Projects →</a>
     <a href="https://github.com/zinniie" class="hero-cta-ghost" target="_blank">GitHub ↗</a>
@@ -385,24 +384,29 @@
 <!-- SKILLS -->
 <section class="skills-section" id="skills">
   <div class="skills-grid">
-    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>UiPath</span>
     <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>Blue Prism</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>Blue Prism Control Room</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>VBO Components</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>Process Studio</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>Object Studio</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>Blue Prism Scheduler</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>Credential Manager</span>
+    <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>UiPath</span>
     <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>UiPath Orchestrator</span>
     <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>REFramework</span>
     <span class="skill-chip chip-teal"><span class="skill-dot dot-teal"></span>UiPath Document Understanding</span>
-    <span class="skill-chip chip-amber"><span class="skill-dot dot-amber"></span>SQL</span>
+    <span class="skill-chip chip-amber"><span class="skill-dot dot-amber"></span>SQL Server</span>
+    <span class="skill-chip chip-amber"><span class="skill-dot dot-amber"></span>Stored Procedures</span>
     <span class="skill-chip chip-amber"><span class="skill-dot dot-amber"></span>VB.NET</span>
     <span class="skill-chip chip-amber"><span class="skill-dot dot-amber"></span>JavaScript</span>
-    <span class="skill-chip chip-amber"><span class="skill-dot dot-amber"></span>VBA</span>
     <span class="skill-chip chip-coral"><span class="skill-dot dot-coral"></span>Exception Handling</span>
     <span class="skill-chip chip-coral"><span class="skill-dot dot-coral"></span>Root Cause Analysis</span>
     <span class="skill-chip chip-coral"><span class="skill-dot dot-coral"></span>Incident Management</span>
-    <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>Azure</span>
-    <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>AWS</span>
+    <span class="skill-chip chip-coral"><span class="skill-dot dot-coral"></span>Bot Support &amp; Monitoring</span>
+    <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>Solution Design Document</span>
+    <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>REST API Integration</span>
     <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>Git / GitHub</span>
-    <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>CI/CD Pipelines</span>
     <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>Agile / Scrum</span>
-    <span class="skill-chip chip-navy"><span class="skill-dot dot-navy"></span>ABBYY OCR</span>
   </div>
 </section>
 
@@ -410,14 +414,259 @@
 <section id="projects">
   <div class="container">
     <p class="section-label">Portfolio</p>
-    <h2 class="section-title">Demo Projects</h2>
-    <p class="section-sub">Realistic enterprise automation scenarios built to demonstrate end-to-end RPA capability, from design through deployment and monitoring.</p>
+    <h2 class="section-title">Production &amp; Demo Projects</h2>
+    <p class="section-sub">Projects 01–04 are real production automations rebuilt and anonymised from live banking environments. Projects 05–08 are demo projects built to enterprise standards.</p>
 
-    <!-- PROJECT 1 -->
+    <!-- PROJECT 01 — NQR RECONCILIATION (PRODUCTION) -->
     <div class="project-card fade-in">
       <div class="project-header">
         <div>
-          <p class="project-num">PROJECT 01</p>
+          <p class="project-num">PROJECT 01 · PRODUCTION</p>
+          <h3 class="project-title">NQR Reconciliation Automation</h3>
+          <p class="project-subtitle">Blue Prism · SQL Reconciliation Engine · spNQRRecon · 9-Category Output</p>
+        </div>
+        <span class="project-badge badge-amber">Blue Prism</span>
+      </div>
+      <div class="project-body">
+        <p class="project-overview">
+          Daily reconciliation of NQR (National QR Code Payment) settlement records against General Ledger entries.
+          The defining feature: all matching logic lives in a SQL stored procedure (<code>spNQRRecon</code>) — auto-reversal
+          detection, dual-key matching, and exception classification all happen at the database layer. Blue Prism
+          orchestrates the data flow; the database does the work. Generates a 9-sheet Excel workbook covering every reconciliation category.
+        </p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Architecture</span>
+            <span class="meta-value">Database-centric · spNQRRecon</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">~10 minutes daily</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Output Categories</span>
+            <span class="meta-value">9 — Matched, Exceptions, GL Exceptions, Auto Reversed, Duplicates + more</span>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">Blue Prism 7.1.0</span>
+          <span class="tech-tag">VBO Components</span>
+          <span class="tech-tag">SQL Stored Procedure</span>
+          <span class="tech-tag">Business Day API</span>
+          <span class="tech-tag">Control Room</span>
+          <span class="tech-tag">Excel Automation</span>
+        </div>
+        <ul class="outcomes">
+          <li>spNQRRecon performs auto-reversal detection before matching — prevents reversed GL entries from appearing as false exceptions</li>
+          <li>Dual-key matching joins on NIP_SESSION_ID or PAYMENT_REFERENCE — handles both NQR reference formats</li>
+          <li>5 files on standard business days, 11 files post-weekend — aggregation handled automatically</li>
+          <li>All 9 result categories written to dedicated worksheets in a single Excel workbook per run</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/Zinniie/rpa-automation-portfolio/tree/main/08-nqr-reconciliation" class="project-link" target="_blank">View on GitHub →</a>
+        <div class="metrics-row">
+          <div class="metric">
+            <span class="metric-val">9</span>
+            <span class="metric-lab">Output categories</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">100%</span>
+            <span class="metric-lab">Audit coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 02 — MERCHANT DEBIT POS SETTLEMENT (PRODUCTION) -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div>
+          <p class="project-num">PROJECT 02 · PRODUCTION</p>
+          <h3 class="project-title">Merchant Debit POS Settlement</h3>
+          <p class="project-subtitle">Blue Prism · Business Day API · Settlement Portal · Posting Control</p>
+        </div>
+        <span class="project-badge badge-amber">Blue Prism</span>
+      </div>
+      <div class="project-body">
+        <p class="project-overview">
+          Daily settlement of merchant debit POS transactions — file retrieval, validation, core banking posting,
+          and stakeholder reporting. Two features stand out: a <strong>dual file source strategy</strong> (shared folder
+          first, Settlement Portal fallback) makes the process resilient without manual intervention; a
+          <strong>configurable posting flag</strong> (IsPostingOn) lets operations suspend posting independently
+          of reporting — no code change required.
+        </p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">~2 minutes daily</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">File Sources</span>
+            <span class="meta-value">Shared folder → Portal fallback</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Posting Control</span>
+            <span class="meta-value">IsPostingOn flag — DB configurable</span>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">Blue Prism 7.1.0</span>
+          <span class="tech-tag">VBO Components</span>
+          <span class="tech-tag">Business Day API</span>
+          <span class="tech-tag">Portal Automation</span>
+          <span class="tech-tag">SQL Server</span>
+          <span class="tech-tag">Control Room</span>
+        </div>
+        <ul class="outcomes">
+          <li>Bot checks shared folder first — only logs into Settlement Portal if file is absent, minimising portal load</li>
+          <li>Working day calculation handles weekends and holidays — correct date range computed automatically</li>
+          <li>IsPostingOn flag allows posting to be disabled without stopping file processing or reporting</li>
+          <li>All configuration changes (start time, posting toggle, file path) made via SQL — zero code changes</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/Zinniie/rpa-automation-portfolio/tree/main/07-merchant-debit-pos-settlement" class="project-link" target="_blank">View on GitHub →</a>
+        <div class="metrics-row">
+          <div class="metric">
+            <span class="metric-val">~2min</span>
+            <span class="metric-lab">Per daily run</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">100%</span>
+            <span class="metric-lab">Audit coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 03 — USER ACCESS MANAGEMENT (PRODUCTION) -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div>
+          <p class="project-num">PROJECT 03 · PRODUCTION</p>
+          <h3 class="project-title">User Access Management Automation</h3>
+          <p class="project-subtitle">Blue Prism · Middleware API · Portal Automation · Event-Driven</p>
+        </div>
+        <span class="project-badge badge-amber">Blue Prism</span>
+      </div>
+      <div class="project-body">
+        <p class="project-overview">
+          Event-driven automation processing user access management requests in near-real-time — creating, modifying,
+          disabling, and resetting access across enterprise systems. Unlike scheduled bots, this is triggered every
+          5 minutes, reacting to incoming requests from a middleware API. The bot captures a screenshot as evidence
+          on every completed operation and emails it to stakeholders automatically.
+        </p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Architecture</span>
+            <span class="meta-value">Event-driven · every 5 minutes</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Request Types</span>
+            <span class="meta-value">New · Disable · Modify · Reset · Timed</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Evidence</span>
+            <span class="meta-value">Screenshot per operation</span>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">Blue Prism 7.1.0</span>
+          <span class="tech-tag">VBO Components</span>
+          <span class="tech-tag">Middleware API</span>
+          <span class="tech-tag">SQL Server</span>
+          <span class="tech-tag">Portal Automation</span>
+          <span class="tech-tag">Control Room</span>
+        </div>
+        <ul class="outcomes">
+          <li>Requests provisioned within ~10 minutes of approval — from middleware to portal to confirmation email</li>
+          <li>50+ API parameters supported — covers all enterprise portal access scenarios</li>
+          <li>Screenshot evidence captured and attached to every confirmation email automatically</li>
+          <li>One failure does not block subsequent requests — exception isolation per operation</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/Zinniie/rpa-automation-portfolio/tree/main/06-user-access-management" class="project-link" target="_blank">View on GitHub →</a>
+        <div class="metrics-row">
+          <div class="metric">
+            <span class="metric-val">~2min</span>
+            <span class="metric-lab">Per request</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">5min</span>
+            <span class="metric-lab">Trigger cycle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 04 — CROSS CURRENCY POSTING (PRODUCTION) -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div>
+          <p class="project-num">PROJECT 04 · PRODUCTION</p>
+          <h3 class="project-title">Cross Currency Posting Automation</h3>
+          <p class="project-subtitle">Blue Prism · Core Banking API · Multi-Session · Business Day API</p>
+        </div>
+        <span class="project-badge badge-amber">Blue Prism</span>
+      </div>
+      <div class="project-body">
+        <p class="project-overview">
+          Three-session daily automation managing the full Cross Currency Posting lifecycle across FXP1, FXP2, and
+          FXP3 sessions. Uses a master-orchestrator pattern — the BN Operations Process routes each session to the
+          settlement VBO by product code, enabling independent session processing and granular failure isolation.
+          A failure in Session 1 does not prevent Sessions 2 or 3 from running.
+        </p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Sessions</span>
+            <span class="meta-value">3 daily (10AM · 1PM · 4PM)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Architecture</span>
+            <span class="meta-value">Master-orchestrator · product routing</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Duration</span>
+            <span class="meta-value">~3 minutes per session</span>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">Blue Prism 7.1.0</span>
+          <span class="tech-tag">VBO Components</span>
+          <span class="tech-tag">Business Day API</span>
+          <span class="tech-tag">Core Banking API</span>
+          <span class="tech-tag">SQL Server</span>
+          <span class="tech-tag">Control Room</span>
+        </div>
+        <ul class="outcomes">
+          <li>Business Day API enforces business-day-only processing — non-business day files aggregated automatically</li>
+          <li>Dynamic file path computation using date token system — no manual path updates required</li>
+          <li>All configuration (start time, active status, output path) managed via SQL — zero code changes</li>
+          <li>Retry count tracked per session — abandoned sessions reset independently without affecting other sessions</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/Zinniie/rpa-automation-portfolio/tree/main/05-cross-currency-posting" class="project-link" target="_blank">View on GitHub →</a>
+        <div class="metrics-row">
+          <div class="metric">
+            <span class="metric-val">3</span>
+            <span class="metric-lab">Daily sessions</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">100%</span>
+            <span class="metric-lab">Audit coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 05 (formerly 01) -->
+    <div class="project-card fade-in">
+      <div class="project-header">
+        <div>
+          <p class="project-num">PROJECT 05 · DEMO</p>
           <h3 class="project-title">Invoice Processing Automation</h3>
           <p class="project-subtitle">Accounts Payable · Document Understanding · SQL Validation</p>
         </div>
@@ -473,11 +722,11 @@
       </div>
     </div>
 
-    <!-- PROJECT 2 -->
+    <!-- PROJECT 06 (formerly 02) -->
     <div class="project-card fade-in">
       <div class="project-header">
         <div>
-          <p class="project-num">PROJECT 02</p>
+          <p class="project-num">PROJECT 06 · DEMO</p>
           <h3 class="project-title">Bank Reconciliation Bot</h3>
           <p class="project-subtitle">Financial Reconciliation · Blue Prism · SQL Reporting</p>
         </div>
@@ -532,11 +781,11 @@
       </div>
     </div>
 
-    <!-- PROJECT 3 -->
+    <!-- PROJECT 07 (formerly 03) -->
     <div class="project-card fade-in">
       <div class="project-header">
         <div>
-          <p class="project-num">PROJECT 03</p>
+          <p class="project-num">PROJECT 07 · DEMO</p>
           <h3 class="project-title">REFramework Transaction Processor</h3>
           <p class="project-subtitle">UiPath · Orchestrator Queues · Full Exception Handling</p>
         </div>
@@ -591,11 +840,11 @@
       </div>
     </div>
 
-    <!-- PROJECT 4 -->
+    <!-- PROJECT 08 (formerly 04) -->
     <div class="project-card fade-in">
       <div class="project-header">
         <div>
-          <p class="project-num">PROJECT 04</p>
+          <p class="project-num">PROJECT 08 · DEMO</p>
           <h3 class="project-title">Solution Design Document — Invoice Bot</h3>
           <p class="project-subtitle">Technical Documentation · SDD · Process Design</p>
         </div>
